@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 // import HomeView from '../views/HomeView.vue'
 import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
+import Welcome from '../components/Welcome.vue'
+import Users from '../components/user/Users.vue'
 
 Vue.use(VueRouter)
 
@@ -30,7 +32,19 @@ const routes = [
   },
   {
     path: '/Home',
-    component: Home
+    component: Home,
+    // 子路由规则
+    redirect: '/welcome',
+    children: [
+      {
+        'path': '/welcome',
+        component: Welcome
+      },
+      {
+        'path': '/users',
+        component: Users
+      }
+    ]
   }
 ]
 
