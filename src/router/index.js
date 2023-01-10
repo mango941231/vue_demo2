@@ -5,6 +5,7 @@ import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 import Welcome from '../components/Welcome.vue'
 import Users from '../components/user/Users.vue'
+import Rights from '../components/power/rights.vue'
 
 Vue.use(VueRouter)
 
@@ -23,30 +24,34 @@ const routes = [
   //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   // }
   {
-    path: '/',
-    redirect: '/login'
+    path: "/",
+    redirect: "/login",
   },
   {
-    path: '/login',
-    component: Login
+    path: "/login",
+    component: Login,
   },
   {
-    path: '/Home',
+    path: "/Home",
     component: Home,
     // 子路由规则
-    redirect: '/welcome',
+    redirect: "/welcome",
     children: [
       {
-        'path': '/welcome',
-        component: Welcome
+        path: "/welcome",
+        component: Welcome,
       },
       {
-        'path': '/users',
-        component: Users
-      }
-    ]
-  }
-]
+        path: "/users",
+        component: Users,
+      },
+      {
+        path: "/rights",
+        component: Rights,
+      },
+    ],
+  },
+];
 
 const router = new VueRouter({
   routes
