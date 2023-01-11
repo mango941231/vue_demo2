@@ -1,30 +1,31 @@
 import Vue from "vue";
-import { 
-    Button,
-    Form, 
-    FormItem, 
-    Input, 
-    Message,
-    Container,
-    Header,
-    Aside,
-    Main,
-    Menu,
-    Submenu,
-    MenuItemGroup,
-    MenuItem,
-    Breadcrumb,
-    BreadcrumbItem,
-    Card,
-    Row,
-    Col,
-    Table,
-    TableColumn,
-    Switch,
-    Tooltip,
-    Pagination,
-    Dialog,
-    Tag
+import {
+  Button,
+  Form,
+  FormItem,
+  Input,
+  Message,
+  Container,
+  Header,
+  Aside,
+  Main,
+  Menu,
+  Submenu,
+  MenuItemGroup,
+  MenuItem,
+  Breadcrumb,
+  BreadcrumbItem,
+  Card,
+  Row,
+  Col,
+  Table,
+  TableColumn,
+  Switch,
+  Tooltip,
+  Pagination,
+  Dialog,
+  MessageBox,
+  Tag
 } from "element-ui";
 
 Vue.use(Button);
@@ -52,3 +53,4 @@ Vue.use(Pagination);
 Vue.use(Dialog);
 Vue.use(Tag);
 Vue.prototype.$message = Message;
+Vue.prototype.$confirm = MessageBox.confirm;
