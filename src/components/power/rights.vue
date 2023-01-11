@@ -12,7 +12,13 @@
         <el-table-column type="index" label="#"></el-table-column>
         <el-table-column label="权限名称" prop="authName"></el-table-column>
         <el-table-column label="路径" prop="path"></el-table-column>
-        <el-table-column label="权限等级" prop="level"></el-table-column>
+        <el-table-column label="权限等级" prop="level">
+          <template slot-scope="scope">
+            <el-tag>一级</el-tag>
+            <el-tag type="success">二级</el-tag>
+            <el-tag type="warning">三级</el-tag>
+          </template>
+        </el-table-column>
       </el-table>
     </el-card>
   </div>
